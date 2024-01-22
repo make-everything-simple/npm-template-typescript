@@ -1,0 +1,34 @@
+{
+  "name": "@askbills/npm-template-typescript",
+  "version": "1.0.0",
+  "description": "Typescript template to build npm package",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "echo 'npm-template-typescript helps you focus on your business implementation'",
+    "test:coverage": "echo 'test:coverage TBU'",
+    "lint": "echo 'lint TBU'",
+    "lint:fix": "echo 'lint:fix TBU'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lengocduy/npm-template-typescript.git"
+  },
+  "keywords": [
+    "npm",
+    "template",
+    "npm-typescript",
+    "package-template"
+  ],
+  "author": "Le Ngoc Duy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lengocduy/npm-template-typescript/issues"
+  },
+  "homepage": "https://github.com/lengocduy/npm-template-typescript#readme",
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
