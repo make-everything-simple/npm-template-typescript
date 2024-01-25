@@ -15,7 +15,7 @@ The following tools need to be installed:
 |------------------|-----------|
 |Dependence Framework| [`@tsconfig/node18`](https://www.npmjs.com/package/@tsconfig/node18) extend ts config node18+, [ts-node](https://www.npmjs.com/package/ts-node) execution and REPL for node.js, with source map and native ESM support.|
 |Coding Standard| TBU|
-|Testing Framework| TBU|
+|Testing Framework| [Jest](https://jestjs.io/) a delightful JavaScript Testing Framework with a focus on simplicity.|
 
 ## How to test
 

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "test": "echo 'npm-template-typescript helps you focus on your business implementation'",
-    "test:coverage": "echo 'test:coverage TBU'",
+    "test": "jest --config ./configs/jest.config.ts",
+    "test:cov": "npm run test --coverage --collectCoverageFrom='src/*.{ts,tsx}'",
     "lint": "echo 'lint TBU'",
     "lint:fix": "echo 'lint:fix TBU'"
   },
@@ -28,6 +28,10 @@
   "homepage": "https://github.com/lengocduy/npm-template-typescript#readme",
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0",
+    "node-notifier": "^10.0.1",
+    "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
