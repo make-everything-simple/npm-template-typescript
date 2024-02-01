@@ -14,8 +14,10 @@ The following tools need to be installed:
 |Capability|Module|
 |------------------|-----------|
 |Dependence Framework| [`@tsconfig/node18`](https://www.npmjs.com/package/@tsconfig/node18) extend ts config node18+, [ts-node](https://www.npmjs.com/package/ts-node) execution and REPL for node.js, with source map and native ESM support.|
+|Build Tools| [`tsup`](https://tsup.egoist.dev) Bundle your TypeScript library with no config, powered by esbuild|
 |Coding Standard| TBU|
 |Testing Framework| [Jest](https://jestjs.io/) a delightful JavaScript Testing Framework with a focus on simplicity.|
+|Useful Links| [npmtrends](https://npmtrends.com/) Compare package download counts over time|
 
 ## How to test
 
