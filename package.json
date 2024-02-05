@@ -1,6 +1,6 @@
 {
 	"name": "@askbills/npm-template-typescript",
-	"version": "1.0.0",
+	"version": "1.0.0-canary.0",
 	"description": "Typescript template to build npm package",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
