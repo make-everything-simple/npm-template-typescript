@@ -1,0 +1,15 @@
+{
+	"name": "example",
+	"version": "1.0.0",
+	"description": "example use the npm package",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo 'example testing a customized npm package on local'",
+		"start": "node src/index.js"
+	},
+	"author": "Le Ngoc Duy",
+	"license": "MIT",
+	"dependencies": {
+		"@askbills/npm-template-typescript": "file:.."
+	}
+}
