@@ -12,15 +12,22 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+            - name: Changelog
+              uses: Bullrich/generate-release-changelog@master
+              id: Changelog
+              env:
+                  REPO: ${{ github.repository }}
             - name: Create Release
               id: create_release
-              uses: actions/create-release@v1
+              uses: actions/create-release@latest
               env:
                   # https://docs.github.com/en/actions/security-guides/automatic-token-authentication
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
                   tag_name: ${{ github.ref }}
-                  release_name: ${{ github.ref }}
+                  release_name: Release ${{ github.ref }}
+                  body: |
+                      ${{ steps.Changelog.outputs.changelog }}
                   draft: false
                   prerelease: false
 
