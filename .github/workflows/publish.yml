@@ -12,6 +12,9 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+              with:
+                  # Number of commits to fetch. 0 indicates all history for all branches and tags.
+                  fetch-depth: 0
             - name: Changelog
               uses: Bullrich/generate-release-changelog@master
               id: Changelog
