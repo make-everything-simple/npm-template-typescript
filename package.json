@@ -1,6 +1,6 @@
 {
     "name": "@make-everything-simple/npm-template-typescript",
-    "version": "0.0.5-test",
+    "version": "0.0.6-test",
     "description": "Typescript template to build npm package",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
@@ -22,7 +22,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/lengocduy/npm-template-typescript.git"
+        "url": "git+https://github.com/make-everything-simple/npm-template-typescript.git"
     },
     "keywords": [
         "npm",
@@ -33,9 +33,9 @@
     "author": "Le Ngoc Duy",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/lengocduy/npm-template-typescript/issues"
+        "url": "https://github.com/make-everything-simple/npm-template-typescript/issues"
     },
-    "homepage": "https://github.com/lengocduy/npm-template-typescript#readme",
+    "homepage": "https://github.com/make-everything-simple/npm-template-typescript#readme",
     "devDependencies": {
         "@tsconfig/node18": "^18.2.2",
         "@types/jest": "^29.5.11",
