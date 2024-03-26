@@ -1,6 +1,12 @@
 # npm-template-typescript
 
-Supports javascript developers who use npm to publish and share package quicker. Less time to setup utility tools to follow best-practices and more time on the core features of the package.
+[![Build Status](https://github.com/make-everything-simple/npm-template-typescript/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/make-everything-simple/npm-template-typescript//actions/workflows/ci.yml?query=branch%3Amain)
+[![Release Status](https://github.com/make-everything-simple/npm-template-typescript/actions/workflows/publish.yml/badge.svg)](https://github.com/make-everything-simple/npm-template-typescript//actions/workflows/publish.yml)
+[![NPM Version](https://badgen.net/npm/v/@make-everything-simple/npm-template-typescript)](https://npmjs.org/package/@make-everything-simple/npm-template-typescript)
+[![NPM Install Size](https://badgen.net/packagephobia/install/@make-everything-simple/npm-template-typescript)](https://packagephobia.com/result?p=@make-everything-simple%2Fnpm-template-typescript)
+[![NPM Downloads](https://badgen.net/npm/dm/@make-everything-simple/npm-template-typescript)](https://npmcharts.com/compare/@make-everything-simple/npm-template-typescript?minimal=true)
+
+Supports javascript developers who use npm to publish and share package quicker. Less time to setup utility tools to follow best-practices, more time on the core features of the package.
 
 ## Prerequisites
 
@@ -41,7 +47,7 @@ npm run prettier:format | yarn prettier:format
 ### Clone the repository
 
 ```bash
-git clone git@github.com:lengocduy/npm-template-typescript.git
+git clone git@github.com:make-everything-simple/npm-template-typescript.git
 cd npm-template-typescript
 npm install | yarn install
 ```
@@ -72,11 +78,11 @@ npm pkg fix
 1. We use the git rebase strategy to keep tracking meaningful commit message. Help to enable rebase when pull `$ git config --local pull.rebase true`
 2. Follow TypeScript Style Guide [Google](https://google.github.io/styleguide/tsguide.html)
 3. Follow Best-Practices in coding:
-    - [Clean code](https://github.com/labs42io/clean-code-typescript) make team happy
-    - [Return early](https://szymonkrajewski.pl/why-should-you-return-early/) make code safer and use resource Efficiency
-    - [Truthy & Falsy](https://frontend.turing.edu/lessons/module-1/js-truthy-falsy-expressions.html) make code shorter
-    - [SOLID Principles](https://javascript.plainenglish.io/solid-principles-with-type-script-d0f9a0589ec5) make clean code
-    - [DRY & KISS](https://dzone.com/articles/software-design-principles-dry-and-kiss) avoid redundancy and make your code as simple as possible
+    1. [Clean code](https://github.com/labs42io/clean-code-typescript) make team happy
+    2. [Return early](https://szymonkrajewski.pl/why-should-you-return-early/) make code safer and use resource Efficiency
+    3. [Truthy & Falsy](https://frontend.turing.edu/lessons/module-1/js-truthy-falsy-expressions.html) make code shorter
+    4. [SOLID Principles](https://javascript.plainenglish.io/solid-principles-with-type-script-d0f9a0589ec5) make clean code
+    5. [DRY & KISS](https://dzone.com/articles/software-design-principles-dry-and-kiss) avoid redundancy and make your code as simple as possible
 4. Make buildable commit and pull latest code from `main` branch frequently
 5. Use readable commit message [karma](http://karma-runner.github.io/6.3/dev/git-commit-msg.html)
 
