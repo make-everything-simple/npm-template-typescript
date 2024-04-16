@@ -44,15 +44,22 @@ npm run prettier:format | yarn prettier:format
 
 ## How to use
 
-### Clone the repository
+### Clone repository and name it
 
 ```bash
 git clone git@github.com:make-everything-simple/npm-template-typescript.git
-cd npm-template-typescript
+# rename to desire name folder
+mv npm-template-typescript $desire_name
+cd $desire_name
+# reinitialize existing Git repository
+git init
+# install dependencies
 npm install | yarn install
+# run build
+npm run build | yarn build
 ```
 
-### Open package.json file to edit some fields e.g. name, repository, etc
+### Update some fields e.g. name, repository, etc in package.json file
 
 we can manage our package.json via [npm-pkg](https://docs.npmjs.com/cli/v10/commands/npm-pkg)
 
