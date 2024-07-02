@@ -6,7 +6,20 @@
 [![NPM Install Size](https://badgen.net/packagephobia/install/@make-everything-simple/npm-template-typescript)](https://packagephobia.com/result?p=@make-everything-simple%2Fnpm-template-typescript)
 [![NPM Downloads](https://badgen.net/npm/dm/@make-everything-simple/npm-template-typescript)](https://npmcharts.com/compare/@make-everything-simple/npm-template-typescript?minimal=true)
 
-Supports javascript developers who use npm to publish and share package quicker. Less time to setup utility tools to follow best-practices, more time on the core features of the package.
+Let developers who publish libraries via npm share with the team or community quicker. Less time to set up utility tools to follow best practices, and more time on the core features of the package
+
+## This package template supports us
+
+-   Customize configuration: eslint, prettier, jest, typescript
+-   Git hook: ensure your code is qualified with lint when committing and test when pushing from your early stage on your local machine
+-   CI jobs: trigger on each PR or Push event to ensure
+    -   Lint
+    -   Build
+    -   Test
+-   CD (publish) jobs: trigger when a new tag is pushed
+    -   Create a new release based on your commit messages like [this](https://github.com/make-everything-simple/npm-template-typescript/releases)
+    -   Publish the npm package to npmjs like [this](https://www.npmjs.com/package/@make-everything-simple/npm-template-typescript)
+    -   Create | Update the Github page like [this](https://github.com/make-everything-simple/npm-template-typescript/pkgs/npm/npm-template-typescript)
 
 ## Prerequisites
 
@@ -91,7 +104,7 @@ npm pkg fix
     4. [SOLID Principles](https://javascript.plainenglish.io/solid-principles-with-type-script-d0f9a0589ec5) make clean code
     5. [DRY & KISS](https://dzone.com/articles/software-design-principles-dry-and-kiss) avoid redundancy and make your code as simple as possible
 4. Make buildable commit and pull latest code from `main` branch frequently
-5. Use readable commit message [karma](http://karma-runner.github.io/6.3/dev/git-commit-msg.html)
+5. Use readable commit message [karma](http://karma-runner.github.io/6.3/dev/git-commit-msg.html) to let us use it in the release notes
 
 ```bash
      /‾‾‾‾‾‾‾‾
