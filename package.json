@@ -1,6 +1,6 @@
 {
     "name": "@make-everything-simple/npm-template-typescript",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Typescript template to build npm package",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
