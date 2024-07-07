@@ -15,7 +15,7 @@
         "start:watch": "tsup src/index.ts --config ./configs/tsup.config.ts --watch --onSuccess 'node dist/index.js'",
         "pretest": "rimraf coverage",
         "test": "jest --config ./configs/jest.config.ts",
-        "lint": "eslint \"{src,tests}/**/*.ts\" --config ./configs/.eslintrc.js",
+        "lint": "eslint \"{src,tests}/**/*.ts\" --config ./configs/.eslintrc.cjs",
         "lint:fix": "npm run lint -- --fix",
         "prettier:format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"configs/**/*\" --config configs/.prettierrc",
         "prepare": "husky install"
@@ -30,7 +30,7 @@
         "npm-typescript",
         "package-template"
     ],
-    "author": "Le Ngoc Duy",
+    "author": "make-everything-simple",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/make-everything-simple/npm-template-typescript/issues"
@@ -60,5 +60,6 @@
     },
     "engines": {
         "node": ">=18.0.0"
-    }
+    },
+    "type": "module"
 }

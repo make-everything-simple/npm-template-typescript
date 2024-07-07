@@ -1,4 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+# Fix lint with prettier
 npx lint-staged
+# Verify lint again with eslint
+npm run lint

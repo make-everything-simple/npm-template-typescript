@@ -1,12 +1,14 @@
 {
-  "extends": "@tsconfig/node18/tsconfig.json",
-  "compilerOptions": {
-    "preserveConstEnums": true,
-    "lib": ["DOM", "ES2023"],
-    "baseUrl": "./",
-    "rootDir": "./src",
-    "outDir": "./dist" /* Specify an output folder for all emitted files. */,
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"],
+    "extends": "@tsconfig/node18/tsconfig.json",
+    "compilerOptions": {
+        "preserveConstEnums": true,
+        "lib": ["DOM", "ESNext"],
+        "baseUrl": "./",
+        "rootDir": "./src",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "outDir": "./dist" /* Specify an output folder for all emitted files. */,
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"],
 }
