@@ -9,3 +9,4 @@ As a best-practice, we always verify our package before publishing your package 
 3. Run `$ npm init` and initialize your package with default entry file `index.ts | index.js`
 4. Install the local npm package in development mode `$ npm install path_to_local_package`
 5. Implement your code logic that reuse functionalities of your npm local package
+6. Clone `.env.environment` to `.env` and replace values accordingly to configure your variables
