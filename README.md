@@ -10,13 +10,10 @@ Let developers who publish libraries via npm share with the team or community qu
 
 ## This package template supports us
 
--   Customize configuration: eslint, prettier, jest, typescript
--   Git hook: ensure your code is qualified with lint when committing and test when pushing from your early stage on your local machine
--   CI jobs: trigger on each PR or Push event to ensure
-    -   Lint
-    -   Build
-    -   Test
--   CD (publish) jobs: trigger when a new tag is pushed
+-   **Customize configuration**: eslint, prettier, jest, typescript
+-   **Git hook**: ensure your code is qualified with lint when committing and test when pushing from your early stage on your local machine
+-   **CI jobs**: trigger on `each PR` or `Push event` to ensure jobs `Lint -> Build -> Test` are verified
+-   **CD (publish) jobs**: trigger when a `new tag` is pushed
     -   Create a new release based on your commit messages like [this](https://github.com/make-everything-simple/npm-template-typescript/releases)
     -   Publish the npm package to npmjs like [this](https://www.npmjs.com/package/@make-everything-simple/npm-template-typescript)
     -   Create | Update the Github page like [this](https://github.com/make-everything-simple/npm-template-typescript/pkgs/npm/npm-template-typescript)
@@ -38,41 +35,18 @@ The following tools need to be installed:
 | Testing Framework    | [Jest](https://jestjs.io/) a delightful JavaScript Testing Framework with a focus on simplicity.                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Useful Links         | [npmtrends](https://npmtrends.com/) Compare package download counts over time, [act](https://nektosact.com/introduction.html) run your GitHub Actions locally, [Actionlint](https://marketplace.visualstudio.com/items?itemName=arahata.linter-actionlint) static checker for GitHub Actions workflow files, [share-dev-environments](https://github.com/make-everything-simple/share-dev-environments) quick setup by running some commands to align development environment among machines or developers |
 
-## How to test
-
-```bash
-npm test | yarn test
-```
-
-## How to check lint
-
-```bash
-# check lint's rules
-npm run lint | yarn lint
-# check lint's rules and try to fix
-npm run lint:fix | yarn lint:fix
-# format your code
-npm run prettier:format | yarn prettier:format
-```
-
 ## How to use
 
-### Clone repository and name it
+### Clone repository and rename it
 
 ```bash
 git clone git@github.com:make-everything-simple/npm-template-typescript.git
 # rename to desire name folder
 mv npm-template-typescript $desire_name
 cd $desire_name
-# reinitialize existing Git repository
-git init
-# install dependencies
-npm install | yarn install
-# run build
-npm run build | yarn build
 ```
 
-### Update some fields e.g. name, repository, etc in package.json file
+### Update necessary fields e.g. name, author, version, repository, etc in package.json file
 
 we can manage our package.json via [npm-pkg](https://docs.npmjs.com/cli/v10/commands/npm-pkg)
 
@@ -85,7 +59,37 @@ npm pkg set [<array>[].<key>=<value> ...]
 npm pkg fix
 ```
 
-### Configure necessary credentials
+### Install dependencies and build it
+
+```bash
+# reinitialize existing Git repository
+git init
+# install dependencies
+npm install | yarn install
+# run build
+npm run build | yarn build
+```
+
+### Implement code and write unit tests to verify your package's business logics
+
+### Verify or fix lint
+
+```bash
+# check lint's rules
+npm run lint | yarn lint
+# check lint's rules and try to fix
+npm run lint:fix | yarn lint:fix
+# format your code
+npm run prettier:format | yarn prettier:format
+```
+
+### Verify unit test
+
+```bash
+npm test | yarn test
+```
+
+### Configure necessary credentials once you are ready for release
 
 1. Generate a Granular Access Token on [npmjs.com](https://www.npmjs.com/) ![NPM_TOKEN](./arts/generate-access-token-npmjs.png)
     1. github package: TBU
@@ -104,7 +108,8 @@ npm pkg fix
     4. [SOLID Principles](https://javascript.plainenglish.io/solid-principles-with-type-script-d0f9a0589ec5) make clean code
     5. [DRY & KISS](https://dzone.com/articles/software-design-principles-dry-and-kiss) avoid redundancy and make your code as simple as possible
 4. Make buildable commit and pull latest code from `main` branch frequently
-5. Use readable commit message [karma](http://karma-runner.github.io/6.3/dev/git-commit-msg.html) to let us use it in the release notes
+5. Follow the [Semantic Versioning](https://semver.org/) once we are ready for release
+6. Use readable commit message [karma](http://karma-runner.github.io/6.3/dev/git-commit-msg.html) to let us use it in the release notes
 
 ```bash
      /‾‾‾‾‾‾‾‾
