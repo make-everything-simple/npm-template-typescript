@@ -10,20 +10,20 @@ Let developers who publish libraries via npm share with the team or community qu
 
 ## This package template supports us
 
--   **Customize configuration**: eslint, prettier, jest, typescript
--   **Git hook**: ensure your code is qualified with lint when committing and test when pushing from your early stage on your local machine
--   **CI jobs**: trigger on `each PR` or `Push event` to ensure jobs `Lint -> Build -> Test` are verified
--   **CD (publish) jobs**: trigger when a `new tag` is pushed
-    -   Create a new release based on your commit messages like [this](https://github.com/make-everything-simple/npm-template-typescript/releases)
-    -   Publish the npm package to npmjs like [this](https://www.npmjs.com/package/@make-everything-simple/npm-template-typescript)
-    -   Create | Update the Github page like [this](https://github.com/make-everything-simple/npm-template-typescript/pkgs/npm/npm-template-typescript)
+1. **Customize configuration**: eslint, prettier, jest, typescript
+2. **Git hook**: ensure your code is qualified with lint when committing and test when pushing from your early stage on your local machine
+3. **CI jobs**: trigger on `each PR` or `Push event` to ensure jobs `Lint -> Build -> Test` are verified
+4. **CD (publish) jobs**: trigger when a `new tag` is pushed
+    1. Create a new release based on your commit messages like [this](https://github.com/make-everything-simple/npm-template-typescript/releases)
+    2. Publish the npm package to npmjs like [this](https://www.npmjs.com/package/@make-everything-simple/npm-template-typescript)
+    3. Create | Update the Github page like [this](https://github.com/make-everything-simple/npm-template-typescript/pkgs/npm/npm-template-typescript)
 
 ## Prerequisites
 
 The following tools need to be installed:
 
--   [Git](http://git-scm.com/)
--   [Node.js 18+](http://nodejs.org/)
+1. [Git](http://git-scm.com/)
+2. [Node.js 18+](http://nodejs.org/)
 
 ## Capabilities and Frameworks
 
@@ -92,10 +92,10 @@ npm test | yarn test
 ### Configure necessary credentials once you are ready for release
 
 1. Generate a Granular Access Token on [npmjs.com](https://www.npmjs.com/) ![NPM_TOKEN](./arts/generate-access-token-npmjs.png)
-    1. github package: TBU
 2. Configure in your repository's secret variables
     1. Individual level ![Individual](./arts/create-secret-variable-for-individual.png)
     2. Organization level to share across repositories on-demand ![Organization](./arts/create-secret-variable-for-organization.png)
+3. Grant `Read and write permissions` to allow Github Actions publish | update github package ![Grant](./arts/grant-github-actions-read-and-write-permissions.png)
 
 ## Collaboration
 
