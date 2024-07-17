@@ -4,9 +4,19 @@ As a best-practice, we always verify our package before publishing your package 
 
 ## How to verify your customized package on your local machine
 
+### Reuse the `example` in our case
+
+Trigger start to install the local package and run your logic inside `index.js`
+
+```bash
+npm run start
+```
+
+### To verify a new testing_project
+
 1. First, create a new testing project e.g `testing_project`
 2. Run `$ cd testing_project`
 3. Run `$ npm init` and initialize your package with default entry file `index.ts | index.js`
-4. Install the local npm package in development mode `$ npm install path_to_local_package`
-5. Implement your code logic that reuse functionalities of your npm local package
-6. Clone `.env.environment` to `.env` and replace values accordingly to configure your variables
+4. Link the dir of your dependency `$ npm link path_to_local_package`
+5. Install the local npm package in development mode `$ npm install path_to_local_package`
+6. Implement your code logic that reuse functionalities of your npm local package
