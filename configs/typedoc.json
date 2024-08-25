@@ -1,0 +1,6 @@
+{
+    "entryPoints": ["../src/index.ts"],
+    "out": "../docs",
+    "exclude": ["**/*.test.ts"],
+    "includeVersion": true
+}

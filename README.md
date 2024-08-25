@@ -17,6 +17,7 @@ Let developers who publish libraries via npm share with the team or community qu
     1. Create a new release based on your commit messages like [this](https://github.com/make-everything-simple/npm-template-typescript/releases)
     2. Publish the npm package to npmjs like [this](https://www.npmjs.com/package/@make-everything-simple/npm-template-typescript)
     3. Create | Update the Github page like [this](https://github.com/make-everything-simple/npm-template-typescript/pkgs/npm/npm-template-typescript)
+5. Documentation Generator for Typescript.
 
 ## Prerequisites
 
@@ -27,13 +28,14 @@ The following tools need to be installed:
 
 ## Capabilities and Frameworks
 
-| Capability           | Module                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Dependence Framework | [`@tsconfig/node18`](https://www.npmjs.com/package/@tsconfig/node18) extend ts config node18+, [typescript](https://www.npmjs.com/package/typescript) adds optional types to JavaScript that support tools for large-scale JavaScript applications                                                                                                                                                                                                                                                         |
-| Build Tools          | [`tsup`](https://tsup.egoist.dev) Bundle your TypeScript library with no config, powered by esbuild                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Coding Standard      | [eslint](https://eslint.org/) statically analyzes your code to quickly find and fix problems based on opt-in [rules](https://eslint.org/docs/latest/rules/), [prettier](https://prettier.io/docs/en/) an opinionated code formatter to build and enforce a style guide on save, [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) to turns off all rules that are unnecessary or might conflict with Prettier.                                                                  |
-| Testing Framework    | [Jest](https://jestjs.io/) a delightful JavaScript Testing Framework with a focus on simplicity.                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Useful Links         | [npmtrends](https://npmtrends.com/) Compare package download counts over time, [act](https://nektosact.com/introduction.html) run your GitHub Actions locally, [Actionlint](https://marketplace.visualstudio.com/items?itemName=arahata.linter-actionlint) static checker for GitHub Actions workflow files, [share-dev-environments](https://github.com/make-everything-simple/share-dev-environments) quick setup by running some commands to align development environment among machines or developers |
+| Capability              | Module                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dependence Framework    | [`@tsconfig/node18`](https://www.npmjs.com/package/@tsconfig/node18) extend ts config node18+, [typescript](https://www.npmjs.com/package/typescript) adds optional types to JavaScript that support tools for large-scale JavaScript applications                                                                                                                                                                                                                                                         |
+| Build Tools             | [`tsup`](https://tsup.egoist.dev) Bundle your TypeScript library with no config, powered by esbuild                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Coding Standard         | [eslint](https://eslint.org/) statically analyzes your code to quickly find and fix problems based on opt-in [rules](https://eslint.org/docs/latest/rules/), [prettier](https://prettier.io/docs/en/) an opinionated code formatter to build and enforce a style guide on save, [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) to turns off all rules that are unnecessary or might conflict with Prettier.                                                                  |
+| Testing Framework       | [Jest](https://jestjs.io/) a delightful JavaScript Testing Framework with a focus on simplicity.                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Documentation Generator | [TypeDoc](https://typedoc.org/guides/overview/) is a documentation generator for TypeScript, [http-server](https://www.npmjs.com/package/http-server) is a simple, zero-configuration command-line static HTTP server                                                                                                                                                                                                                                                                                      |
+| Useful Links            | [npmtrends](https://npmtrends.com/) Compare package download counts over time, [act](https://nektosact.com/introduction.html) run your GitHub Actions locally, [Actionlint](https://marketplace.visualstudio.com/items?itemName=arahata.linter-actionlint) static checker for GitHub Actions workflow files, [share-dev-environments](https://github.com/make-everything-simple/share-dev-environments) quick setup by running some commands to align development environment among machines or developers |
 
 ## How to use
 
@@ -70,7 +72,7 @@ npm install | yarn install
 npm run build | yarn build
 ```
 
-### Implement code and write unit tests to verify your package's business logics
+### Implement your production code, and write unit tests
 
 ### Verify or fix lint
 
@@ -89,13 +91,14 @@ npm run prettier:format | yarn prettier:format
 npm test | yarn test
 ```
 
-### Configure necessary credentials once you are ready for release
+### Review docs in your local machine
 
-1. Generate a Granular Access Token on [npmjs.com](https://www.npmjs.com/) ![NPM_TOKEN](./arts/generate-access-token-npmjs.png)
-2. Configure in your repository's secret variables
-    1. Individual level ![Individual](./arts/create-secret-variable-for-individual.png)
-    2. Organization level to share across repositories on-demand ![Organization](./arts/create-secret-variable-for-organization.png)
-3. Grant `Read and write permissions` to allow Github Actions publish | update github package ![Grant](./arts/grant-github-actions-read-and-write-permissions.png)
+```bash
+// Port: 8080 as default
+npm run docs:serve
+```
+
+### [Configure Publishing's Credentials](./CONFIG.md)
 
 ## Collaboration
 

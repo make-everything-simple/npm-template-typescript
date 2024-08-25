@@ -1,0 +1,32 @@
+# Generate and deploy documentation to branch `gh-pages` on-demand. We can switch to auto trigger after each release if needed. Please configure your Github Page point to branch `gh-pages`
+name: Generate Doc
+
+on:
+    workflow_dispatch:
+        inputs:
+            branch:
+                description: 'Branch to generate Doc for'
+                required: true
+                default: 'main' # Default to main branch
+
+jobs:
+    gen-doc:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Install dependencies
+              run: npm install # Or yarn install
+
+            - name: Generate TypeDoc
+              run: npm run docs:build
+
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./docs # Or the directory specified in your typeDoc config

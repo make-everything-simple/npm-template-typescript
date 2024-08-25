@@ -29,3 +29,4 @@ artifacts/
 
 # Build files
 /dist
+/docs
