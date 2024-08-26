@@ -1,43 +1,9 @@
 {
     "name": "@make-everything-simple/npm-template-typescript",
-    "version": "1.0.4",
     "description": "Typescript template to build npm package",
-    "main": "./dist/index.js",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "prebuild": "rimraf dist",
-        "build": "tsup --config ./configs/tsup.config.ts",
-        "start": "npm run build && node dist/index.js",
-        "start:watch": "tsup src/index.ts --config ./configs/tsup.config.ts --watch --onSuccess 'node dist/index.js'",
-        "pretest": "rimraf coverage",
-        "test": "jest --config ./configs/jest.config.ts",
-        "lint": "eslint \"{src,tests}/**/*.ts\" --config ./configs/.eslintrc.cjs",
-        "lint:fix": "npm run lint -- --fix",
-        "prettier:format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"configs/**/*\" --config configs/.prettierrc",
-        "prepare": "husky install",
-        "docs:build": "typedoc --options ./configs/typedoc.json",
-        "docs:serve": "npm run docs:build && http-server ./docs --cors -p 8080 -c-1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/make-everything-simple/npm-template-typescript.git"
-    },
-    "keywords": [
-        "npm",
-        "template",
-        "npm-typescript",
-        "package-template"
-    ],
+    "version": "1.0.4",
     "author": "make-everything-simple",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/make-everything-simple/npm-template-typescript/issues"
-    },
-    "homepage": "https://github.com/make-everything-simple/npm-template-typescript#readme",
+    "bugs": "https://github.com/make-everything-simple/npm-template-typescript/issues",
     "devDependencies": {
         "@tsconfig/node18": "^18.2.2",
         "@types/jest": "^29.5.11",
@@ -53,17 +19,50 @@
         "node-notifier": "^10.0.1",
         "prettier": "3.2.4",
         "rimraf": "^5.0.5",
+        "syncpack": "^13.0.0",
         "ts-jest": "^29.1.2",
         "ts-node": "^10.9.2",
         "tsup": "^8.0.1",
         "typedoc": "^0.26.6",
         "typescript": "^5.3.3"
     },
-    "lint-staged": {
-        "**/*": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"configs/**/*\" --config configs/.prettierrc --ignore-unknown"
-    },
     "engines": {
         "node": ">=18.0.0"
     },
-    "type": "module"
+    "files": [
+        "dist"
+    ],
+    "homepage": "https://github.com/make-everything-simple/npm-template-typescript#readme",
+    "keywords": [
+        "npm",
+        "npm-typescript",
+        "package-template",
+        "template"
+    ],
+    "license": "MIT",
+    "lint-staged": {
+        "**/*": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"config/**/*\" --config config/.prettierrc --ignore-unknown"
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "repository": "make-everything-simple/npm-template-typescript.git",
+    "scripts": {
+        "build": "tsup --config ./config/tsup.config.ts",
+        "docs:build": "typedoc --options ./config/typedoc.json",
+        "docs:serve": "npm run docs:build && http-server ./docs --cors -p 8080 -c-1",
+        "lint": "eslint \"{src,tests}/**/*.ts\" --config ./config/.eslintrc.cjs",
+        "lint:fix": "npm run lint -- --fix",
+        "prebuild": "rimraf dist",
+        "prepare": "husky install",
+        "pretest": "rimraf coverage",
+        "prettier:format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"config/**/*\" --config config/.prettierrc",
+        "start": "npm run build && node dist/index.js",
+        "start:watch": "tsup src/index.ts --config ./config/tsup.config.ts --watch --onSuccess 'node dist/index.js'",
+        "syncpack:check": "yarn syncpack list-mismatches --config ./config/.syncpackrc",
+        "syncpack:fix": "yarn syncpack fix-mismatches --config ./config/.syncpackrc",
+        "syncpack:format": "yarn syncpack format --config ./config/.syncpackrc",
+        "test": "jest --config ./config/jest.config.ts"
+    },
+    "type": "module",
+    "types": "./dist/index.d.ts"
 }

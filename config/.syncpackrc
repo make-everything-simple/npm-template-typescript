@@ -1,0 +1,3 @@
+{
+  "source": ["package.json", "packages/*/package.json"]
+}
